@@ -1,8 +1,20 @@
 let accountsTableBody = document.querySelector('#accounts-table-body');
+let accountsView = document.querySelector('#accounts-view');
+let addAccountsView = document.querySelector('#add-account-view');
 let accountsViewBtn = document.querySelector('[href="accounts-view"]');
 let addAccountsViewBtn = document.querySelector('[href="add-accounts-view"]');
 
-console.log(addAccountsViewBtn);
+addAccountsViewBtn.addEventListener('click', (e) =>{
+	e.preventDefault();
+	addAccountsView.style.display = "block";
+	accountsView.style.display = "none";
+});
+
+accountsViewBtn.addEventListener('click', (e) =>{
+	e.preventDefault();
+	addAccountsView.style.display = "none";
+	accountsView.style.display = "block";
+});
 
 createAccountsTable();
 
