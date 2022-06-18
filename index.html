@@ -4,21 +4,22 @@
 	<meta charset="utf-8">
 	<title>Account</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a href="" class="navbar-brand">Accounts</a>
 		<ul class="navbar-nav ml-auto">
-			<li class="nav-item"><a href="" class="nav-link">Accounts</a></li>
-			<li class="nav-item"><a href="" class="nav-link">Add Accounts</a></li>
+			<li class="nav-item"><a href="accounts-view" class="nav-link">Accounts</a></li>
+			<li class="nav-item"><a href="add-accounts-view" class="nav-link">Add Accounts</a></li>
 		</ul>
 	</nav>
 
 
 	<div class="container-fluide">
 		<!---Account views--->
-		<div class="row">
+		<div class="row view" id="accounts-view">
 			<div class="col-10 offset-1">
 				<h2 class="display-4 m-4">Accounts</h2>
 
@@ -51,7 +52,7 @@
 <!---Add Account view ------------------>
 
 
-	<div class="row">
+	<div class="row view" id="add-account-view">
 			<div class="col-10 offset-1">
 				<h2 class="display-4 m-4">Add Accounts</h2>
 

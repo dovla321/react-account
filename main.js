@@ -1,4 +1,8 @@
 let accountsTableBody = document.querySelector('#accounts-table-body');
+let accountsViewBtn = document.querySelector('[href="accounts-view"]');
+let addAccountsViewBtn = document.querySelector('[href="add-accounts-view"]');
+
+console.log(addAccountsViewBtn);
 
 createAccountsTable();
 
