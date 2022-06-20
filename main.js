@@ -69,13 +69,33 @@ function createAccountsTable(){
 	for(let i=0; i < db.length; i++){
 		const account = db[i];
 		htmlAccounts += `<tr>
-							<th>${account.id}</th>
-							<th>${account.name}</th>
-							<th>${account.lastname}</th>
-							<th>${account.email}</th>
-							<th>${account.phone}</th>
+							<td>${account.id}</td>
+							<td>${account.name}</td>
+							<td>${account.lastname}</td>
+							<td>${account.email}</td>
+							<td>${account.phone}</td>
+							<td><button data-id="${i}" class="edit-btn btn-sm btn-warning form-control">Edit</button></td>
+							<td><button data-id="${i}" class="delete-btn btn-sm btn-danger form-control">Delete</button></td>
 						</tr>`
 	}
 
 	accountsTableBody.innerHTML = htmlAccounts;
+	let allDeleteBtns = document.querySelectorAll('.delete-btn');
+	let allEditBtns = document.querySelectorAll('.edit-btn');
+
+	for(let i =0; i < allDeleteBtns.length; i++){
+		allDeleteBtns[i].addEventListener('click', deleteAccount);
+		allEditBtns[i].addEventListener('click',editAccount);
+	}
+}
+
+function deleteAccount(){
+	let id = this.getAttribute('data-id');
+	db.splice(id,1);
+	createAccountsTable();
+	showView("#accounts-view");
+}
+
+function editAccount(){
+	
 }
