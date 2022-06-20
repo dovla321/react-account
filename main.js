@@ -1,3 +1,7 @@
+window.addEventListener('beforeunload',save);
+
+
+
 let accountsTableBody = document.querySelector('#accounts-table-body');
 let accountsView = document.querySelector('#accounts-view');
 let addAccountsView = document.querySelector('#add-account-view');
@@ -132,4 +136,12 @@ function editAccount(){
 	eEmail.value = selectedAccount.email;
 	ePhone.value = selectedAccount.phone;
 	showView("#edit-account-view");
+}
+
+
+
+// funkcija save
+
+function save(){
+	localStorage.db = JSON.stringify(db);
 }
